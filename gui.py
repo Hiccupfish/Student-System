@@ -20,10 +20,15 @@ class LearnerManagementSystem:
         self.grade_label = tk.Label(root, text="Grade")
         self.grade_label.grid(row=2, column=0)
         self.grade_entry = tk.Entry(root)
-        self.grade_entry.grid(row=2, column=1)
+        self.grade_entry.grid(row=2, column=1)        
+        
+        self.learner_class_label = tk.Label(root, text="Class")
+        self.learner_class_label.grid(row=3, column=0)
+        self.grade_entry = tk.Entry(root)
+        self.grade_entry.grid(row=3, column=1)
         
         self.add_button = tk.Button(root, text="Add Learner", command=self.add_learner)
-        self.add_button.grid(row=3, column=0, columnspan=2)
+        self.add_button.grid(row=6, column=0, columnspan=2)
         
     def add_learner(self):
         name = self.name_entry.get()
