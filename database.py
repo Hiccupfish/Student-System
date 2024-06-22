@@ -21,3 +21,4 @@ def create_database():
     con.commit()
     con.close()
 create_database()
+create_database()
