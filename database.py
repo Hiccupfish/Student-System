@@ -10,15 +10,14 @@ def create_database():
                 age INTEGER,
                 grade TEXT)''')
     
-    
     cur.execute('''CREATE TABLE IF NOT EXISTS results (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     learner_id INTEGER,
                     subject TEXT NOT NULL,
                     score INTEGER,
-                    FOREIGN KEY (learner_id) REFERENCES learners(id))''')
+                    FOREIGN KEY (learner_id) REFERENCES learner(id))''')  # Corrected table name
     
     con.commit()
     con.close()
-create_database()
+
 create_database()
