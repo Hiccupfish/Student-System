@@ -7,9 +7,10 @@ def create_database():
     cur.execute('''CREATE TABLE IF NOT EXISTS learner (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
-                Surname TEXT NOT NULL,
-                DOB INTEGER,
+                surname TEXT NOT NULL,
+                dob INTEGER,
                 grade INTEGER,
+                contact INTEGER,
                 class TEXT)''')
     
     cur.execute('''CREATE TABLE IF NOT EXISTS results (
