@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>539</height>
+    <width>792</width>
+    <height>521</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,93 +17,13 @@
    <string notr="true">background-color: rgb(232, 232, 232);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="IconWidget" native="true">
+   <widget class="QWidget" name="IconNameWidget" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>54</width>
-      <height>521</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QWidget{
-	
-	background-color: rgb(58, 111, 255);
-}</string>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_5">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_15">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>263</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_6">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="IconNameWidget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>0</y>
-      <width>181</width>
-      <height>521</height>
+      <width>231</width>
+      <height>511</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -224,7 +144,7 @@ QPushButton{
       <item>
        <widget class="QPushButton" name="pushButton_11">
         <property name="text">
-         <string>PushButton</string>
+         <string>lovers</string>
         </property>
        </widget>
       </item>
@@ -343,7 +263,7 @@ QPushButton{
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>70</x>
@@ -364,7 +284,7 @@ QPushButton{
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -397,7 +317,7 @@ QPushButton{
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>260</x>
@@ -430,7 +350,7 @@ QPushButton{
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>330</x>
@@ -467,7 +387,7 @@ QPushButton{
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -528,41 +448,6 @@ QPushButton{
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="../AppData/Local/Programs/Python/Python311/Lib/site-packages/qt5_applications/Qt/bin/resources.qrc"/>
- </resources>
- <connections>
-  <connection>
-   <sender>pushButton_11</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>IconWidget</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>343</x>
-     <y>27</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>233</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_11</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>IconNameWidget</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>359</x>
-     <y>30</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>172</x>
-     <y>289</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <resources/>
+ <connections/>
 </ui>

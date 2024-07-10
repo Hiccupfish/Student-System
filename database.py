@@ -22,6 +22,7 @@ def create_database():
     
     con.commit()
     con.close()
+#adds the learmner to the database
     
 def add_learner(name, surname, grade, contact, class_name, dob):
     con = sqlite3.connect("StudentSystemv.db")
@@ -33,6 +34,7 @@ def add_learner(name, surname, grade, contact, class_name, dob):
     con.commit()
     con.close()
     
+#update the leaner on the database    
 def update_learner(id, name, surname, grade, contact, class_name, dob):
     con = sqlite3.connect("StudentSystemv.db")
     cur = con.cursor()
