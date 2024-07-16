@@ -3,7 +3,7 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from learnermanagement2 import Ui_MainWindow 
-from database import add_learner,select_learners,searchByName
+from database import add_learner,select_learners,searchByName,delete_learner
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -14,6 +14,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Connect buttons to functions
         self.pushButton_12.clicked.connect(self.handle_add_learner)
         self.pushButton_search.clicked.connect(self.handle_search_by_name)
+        self.deletebutton.clicked.connect(self.handledeleteSelected)
 
         
     def handle_add_learner(self):
@@ -28,6 +29,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print("succcessfully, created")
         self.clear_input_fields()
         
+        
+#delete selected learners
+    def handledeleteSelected(self):
+        selected_items = self.tableWidget.selectedItems()
+        row = selected_items[0].row()  # Get the row index
+        item_id = int(self.tableWidget.item(row, 0).text())
+        delete_learner(item_id)
+        self.refresh_learners_table()
+                    
         
     def clear_input_fields(self):
         self.lineEdit_name.clear()
