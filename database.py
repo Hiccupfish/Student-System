@@ -68,7 +68,7 @@ def searchByName( name):
     con = sqlite3.connect("StudentSystemv.db")
     cur = con.cursor()
     
-    cur.execute("SELECT name FROM learner WHERE name LIKE ?", ('%' + name + '%',))
+    cur.execute("SELECT name,surname,grade,class,contact FROM learner WHERE name LIKE ?", ('%' + name + '%',))
     rows=cur.fetchall()
     con.close()
     return rows

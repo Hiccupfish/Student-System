@@ -3,7 +3,7 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from learnermanagement2 import Ui_MainWindow 
-from database import add_learner,select_learners
+from database import add_learner,select_learners,searchByName
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -13,15 +13,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         # Connect buttons to functions
         self.pushButton_12.clicked.connect(self.handle_add_learner)
+        self.pushButton_search.clicked.connect(self.handle_search_by_name)
 
         
     def handle_add_learner(self):
-        name = self.lineEdit_2.text()
-        surname = self.lineEdit_4.text()
-        grade = self.lineEdit_3.text()
-        contact = self.lineEdit_6.text()
-        class_name = self.lineEdit_5.text()
-        dob = self.lineEdit_7.text()
+        name = self.lineEdit_name.text()
+        surname = self.lineEdit_surname.text()
+        grade = self.lineEdit_grade.text()
+        contact = self.lineEdit_contact.text()
+        class_name = self.lineEdit_class.text()
+        dob = self.lineEdit_dob.text()
         add_learner(name, surname, grade, contact, class_name, dob)
         self.refresh_learners_table()
         print("succcessfully, created")
@@ -29,12 +30,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         
     def clear_input_fields(self):
-        self.lineEdit_2.clear()
-        self.lineEdit_4.clear()
-        self.lineEdit_3.clear()
-        self.lineEdit_6.clear()
-        self.lineEdit_5.clear()
-        self.lineEdit_7.clear()
+        self.lineEdit_name.clear()
+        self.lineEdit_surname.clear()
+        self.lineEdit_grade.clear()
+        self.lineEdit_class.clear()
+        self.lineEdit_dob.clear()
+        self.lineEdit_contact.clear()
         
         
 # handles the action of selecting and displaying learners in a table widget.        
@@ -45,12 +46,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         for row_num, row_data in enumerate(rows):
             for col_num, col_data in enumerate(row_data):
                 self.tableWidget.setItem(row_num, col_num, QtWidgets.QTableWidgetItem(str(col_data)))
+                
         
         
     def refresh_learners_table(self):
         # Call handle_select_learners to refresh the table view
         self.handle_select_learners()
         
+    def handle_search_by_name(self):
+        name = self.lineEdit_search.text()
+        rows=searchByName(name)
+        
+        self.tableWidget.setRowCount(0)
+
+        # Populate the table with the results
+        for row_num, row in enumerate(rows):
+            self.tableWidget.insertRow(row_num)
+            for col_num, data in enumerate(row):
+                self.tableWidget.setItem(row_num, col_num, QTableWidgetItem(str(data)))
         
         
 if __name__ == '__main__':
