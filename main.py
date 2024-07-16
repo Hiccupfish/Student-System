@@ -2,7 +2,7 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
-from learnerManagement import Ui_MainWindow 
+from learnermanagement2 import Ui_MainWindow 
 from database import add_learner,select_learners
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -25,6 +25,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         add_learner(name, surname, grade, contact, class_name, dob)
         self.refresh_learners_table()
         print("succcessfully, created")
+        self.clear_input_fields()
+        
+        
+    def clear_input_fields(self):
+        self.lineEdit_2.clear()
+        self.lineEdit_4.clear()
+        self.lineEdit_3.clear()
+        self.lineEdit_6.clear()
+        self.lineEdit_5.clear()
+        self.lineEdit_7.clear()
         
         
 # handles the action of selecting and displaying learners in a table widget.        

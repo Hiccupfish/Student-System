@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>792</width>
-    <height>521</height>
+    <width>788</width>
+    <height>512</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -142,9 +142,9 @@ QPushButton{
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_11">
+       <widget class="QPushButton" name="pushButton_search">
         <property name="text">
-         <string>lovers</string>
+         <string>Search</string>
         </property>
        </widget>
       </item>
@@ -162,7 +162,7 @@ QPushButton{
        </spacer>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="lineEdit_search"/>
       </item>
       <item>
        <spacer name="horizontalSpacer">
@@ -229,6 +229,11 @@ QPushButton{
        </property>
        <column>
         <property name="text">
+         <string>Number</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
          <string>Name</string>
         </property>
        </column>
@@ -239,12 +244,12 @@ QPushButton{
        </column>
        <column>
         <property name="text">
-         <string>New Column</string>
+         <string>Grade</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>Grade</string>
+         <string>DOB</string>
         </property>
        </column>
       </widget>
@@ -274,13 +279,13 @@ QPushButton{
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="lineEdit_name"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="lineEdit_grade"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="lineEdit_contact"/>
          </item>
         </layout>
        </widget>
@@ -361,13 +366,13 @@ QPushButton{
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_6">
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="lineEdit_surname"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="lineEdit_class"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="lineEdit_dob"/>
          </item>
         </layout>
        </widget>
@@ -441,7 +446,7 @@ QPushButton{
       </rect>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>S</string>
      </property>
     </widget>
    </widget>
